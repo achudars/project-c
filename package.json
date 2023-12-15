@@ -32,7 +32,7 @@
 	"type": "module",
 	"dependencies": {
 		"@egjs/svelte-grid": "^1.15.0",
-		"eslint-plugin-import": "^2.29.0",
+		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-react": "^7.33.2"
 	}
