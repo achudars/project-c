@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.2.4",
-		"@sveltejs/kit": "^2.5.25",
+		"@sveltejs/kit": "^2.5.26",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"@typescript-eslint/eslint-plugin": "^7.18.0",
 		"@typescript-eslint/parser": "^7.18.0",
@@ -34,7 +34,7 @@
 	"dependencies": {
 		"@egjs/svelte-grid": "^1.16.0",
 		"eslint-plugin-import": "^2.30.0",
-		"eslint-plugin-jsx-a11y": "^6.9.0",
+		"eslint-plugin-jsx-a11y": "^6.10.0",
 		"eslint-plugin-react": "^7.35.2"
 	}
 }
