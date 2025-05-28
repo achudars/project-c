@@ -32,9 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@egjs/svelte-grid": "1.16.0",
-		"eslint-plugin-import": "2.31.0",
-		"eslint-plugin-jsx-a11y": "6.10.2",
-		"eslint-plugin-react": "7.37.5"
+		"@egjs/svelte-grid": "1.16.0"
 	}
 }
