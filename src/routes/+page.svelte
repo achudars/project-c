@@ -1,5 +1,9 @@
 <script>
-	import { JustifiedGrid } from '@egjs/svelte-grid';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+
+	let container;
+	let gridItems = [];
 
 	const gap = 5;
 	const defaultDirection = 'end';
@@ -8,18 +12,36 @@
 	const sizeRange = [200, 1000];
 	const isCroppedSize = false;
 	const displayedRow = -1;
+
+	onMount(async () => {
+		if (browser) {
+			const { JustifiedGrid } = await import('@egjs/svelte-grid');
+
+			// Create a new instance of JustifiedGrid
+			const gridInstance = new JustifiedGrid();
+
+			// Use as an action on the container
+			const options = {
+				columnRange,
+				defaultDirection,
+				displayedRow,
+				gap,
+				isCroppedSize,
+				rowRange,
+				sizeRange
+			};
+
+			// Apply the grid action to the container
+			gridInstance.mount(container, options);
+
+			// Find and update the grid items
+			gridItems = Array.from(container.querySelectorAll('.image'));
+			gridInstance.syncElements(gridItems);
+		}
+	});
 </script>
 
-<JustifiedGrid
-	class="container"
-	{columnRange}
-	{defaultDirection}
-	{displayedRow}
-	{gap}
-	{isCroppedSize}
-	{rowRange}
-	{sizeRange}
->
+<div class="container" bind:this={container}>
 	<div class="image" data-grid-content-offset="40">
 		<img alt="image1" src="https://naver.github.io/egjs-infinitegrid/assets/image/1.jpg" />
 		<div class="title">Item 1</div>
@@ -60,7 +82,7 @@
 		<img alt="image10" src="https://naver.github.io/egjs-infinitegrid/assets/image/10.jpg" />
 		<div class="title">Item 10</div>
 	</div>
-</JustifiedGrid>
+</div>
 
 <style>
 	.image {
