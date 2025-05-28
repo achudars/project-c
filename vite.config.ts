@@ -11,5 +11,18 @@ export default defineConfig({
 			// Allow serving files from one level up from the package root
 			strict: false
 		}
+	},
+	build: {
+		sourcemap: true
+	},
+	optimizeDeps: {
+		exclude: [
+			'@sveltejs/kit',
+			'@egjs/svelte-grid',
+			'svelte',
+			'svelte/internal',
+			'svelte/store',
+			'svelte/transition'
+		]
 	}
 });
