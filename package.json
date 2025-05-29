@@ -32,6 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@egjs/svelte-grid": "1.16.0"
+		"@egjs/svelte-grid": "^1.16.0"
 	}
 }
