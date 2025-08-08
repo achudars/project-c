@@ -13,8 +13,8 @@
 		"format": "prettier --plugin-search-dir project-c --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "6.0.1",
-		"@sveltejs/kit": "2.27.1",
+		"@sveltejs/adapter-auto": "6.0.2",
+		"@sveltejs/kit": "2.27.3",
 		"@sveltejs/vite-plugin-svelte": "5.1.1",
 		"@typescript-eslint/eslint-plugin": "8.39.0",
 		"@typescript-eslint/parser": "8.39.0",
