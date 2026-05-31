@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  '@rolldown/binding-win32-x64-msvc': true
+  unrs-resolver: true
+  '@swc/core': true
